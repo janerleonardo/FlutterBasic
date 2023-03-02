@@ -29,7 +29,12 @@ class MyApp extends StatelessWidget {
           title: Text("Hello Word Janer"),
         ),
         body: Center(
-          child: Text("Your First Hello Word"),
+          child: Column(
+            children: <Widget>[ 
+              const Text("Your first hello word with Flutter"),
+              const Text("Jan3r"),
+            ],
+          ),
         ) ,
 
       )//const MyHomePage(title: 'Flutter Demo Home Page'),
