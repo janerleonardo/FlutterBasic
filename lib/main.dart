@@ -30,12 +30,17 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[ 
               const Text("Your first hello word with Flutter"),
               const Text("Jan3r"),
             ],
           ),
         ) ,
+        floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
+          tooltip: "Button",
+          child: Icon(Icons.settings_system_daydream),
+        ),
 
       )//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
