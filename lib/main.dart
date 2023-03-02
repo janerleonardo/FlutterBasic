@@ -29,13 +29,27 @@ class MyApp extends StatelessWidget {
           title: Text("Hello Word Janer"),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[ 
-              const Text("Your first hello word with Flutter"),
-              const Text("Jan3r"),
+          child: Stack(
+            fit: StackFit.passthrough,
+            children: <Widget> [
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+              ),
+              Container (
+                width: 90,
+                height: 90,
+                color: Colors.red,
+              ),
+              Container(
+                width: 80,
+                height: 80,
+                color: Colors.yellow,
+              ),
+
             ],
-          ),
+          )
         ) ,
         floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
           tooltip: "Button",
