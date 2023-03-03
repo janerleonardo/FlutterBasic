@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'description_place.dart';
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
+  
+  String stringDommy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
   // This widget is the root of your application.
   @override
@@ -26,34 +28,12 @@ class MyApp extends StatelessWidget {
       ),
      home:  Scaffold(
         appBar: AppBar(
-          title: Text("Hello Word Janer"),
+          title: Text("Header"),
         ),
-        body: Center(
-          child: Stack(
-            fit: StackFit.passthrough,
-            children: <Widget> [
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
-              ),
-              Container (
-                width: 90,
-                height: 90,
-                color: Colors.red,
-              ),
-              Container(
-                width: 80,
-                height: 80,
-                color: Colors.yellow,
-              ),
-
-            ],
-          )
-        ) ,
+        body: new DescriptionPlace("Bahamas",4,stringDommy) ,
         floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
           tooltip: "Button",
-          child: Icon(Icons.settings_system_daydream),
+          child: Icon(Icons.favorite),
         ),
 
       )//const MyHomePage(title: 'Flutter Demo Home Page'),
