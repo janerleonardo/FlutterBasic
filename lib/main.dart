@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_place_list.dart';
 void main() {
   runApp( MyApp());
 }
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Header"),
         ),
-        body: new DescriptionPlace("Bahamas",4,stringDommy) ,
+        body: new ReviewPlaceList(),   //DescriptionPlace("Bahamas",4,stringDommy) ,
         floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
           tooltip: "Button",
           child: Icon(Icons.favorite),
