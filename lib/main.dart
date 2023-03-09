@@ -48,10 +48,10 @@ class MyApp extends StatelessWidget {
         //    ReviewPlaceList()
         //  ],
         //) ,//new ReviewPlaceList(),   //DescriptionPlace("Bahamas",4,stringDommy) ,
-        floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
+        /*floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
           tooltip: "Button",
           child: Icon(Icons.favorite),
-        ),
+        ),*/
 
       )//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -134,11 +134,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+    /* floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),*/ // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
