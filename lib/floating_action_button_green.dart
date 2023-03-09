@@ -9,11 +9,31 @@ class FloatingActionButtonGreen extends StatefulWidget {
 
 }
 
-class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
-  late bool indPressed =false;
+class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen>  
+with AutomaticKeepAliveClientMixin {
+  late IconData icon;
+   late bool indPressed = false;
+    @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+ 
+   @override
+  void initState() {
+    super.initState();
+    this.icon = Icons.favorite_border;
+  }
+
+ 
   void onPressedFav (){
     setState(() {
-      indPressed = !indPressed;
+       if(this.icon == Icons.favorite_border) {
+        this.icon = Icons.favorite;
+        this.indPressed = true;
+      } else {
+        this.icon = Icons.favorite_border;
+        this.indPressed = false;
+      }
+   
        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content:  Text(((indPressed)? "Agregaste a ": "Eliminaste de ") + " favorito"),
             duration:  Duration(seconds: 1),
@@ -25,6 +45,9 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
           ));
     });
   }
+    
+     
+  
   
   @override
   Widget build(BuildContext context) {
@@ -35,8 +58,10 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
       tooltip: "Fav",
       onPressed: onPressedFav,
       child: Icon(
-        (indPressed)? Icons.favorite : Icons.favorite_border
+        this.icon
       ),
     );
   }
+  
+
 }
