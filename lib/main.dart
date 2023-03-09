@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_place_list.dart';
+import 'gradient_back.dart';
 void main() {
   runApp( MyApp());
 }
@@ -28,10 +29,23 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
      home:  Scaffold(
-        appBar: AppBar(
-          title: Text("Header"),
+        body: Stack(
+          children: [
+            ListView(
+              children: [
+                  DescriptionPlace("Bahamas",4,stringDommy) ,
+                  ReviewPlaceList()
+              ],
+            ),
+            GradientBack()
+          ],
         ),
-        body: new ReviewPlaceList(),   //DescriptionPlace("Bahamas",4,stringDommy) ,
+        // Column(
+        //  children: [
+        //    DescriptionPlace("Bahamas",4,stringDommy) ,
+        //    ReviewPlaceList()
+        //  ],
+        //) ,//new ReviewPlaceList(),   //DescriptionPlace("Bahamas",4,stringDommy) ,
         floatingActionButton: FloatingActionButton(onPressed: () => 1+1 ,
           tooltip: "Button",
           child: Icon(Icons.favorite),
