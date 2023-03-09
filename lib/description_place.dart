@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
     String namePlace;
     int starts;
     String descriptionPlace;
+    double top_ = 380.0;
 
     DescriptionPlace(this.namePlace, this.starts, this.descriptionPlace);
 
@@ -15,7 +17,7 @@ class DescriptionPlace extends StatelessWidget {
    
     final star_half = Container(
       margin:  EdgeInsets.only(
-        top: 323.0,
+        top: top_+3.0,
         right: 3.0 
       ),
       child: Icon(
@@ -25,7 +27,7 @@ class DescriptionPlace extends StatelessWidget {
     );
     final star_border = Container(
       margin:  EdgeInsets.only(
-        top: 323.0,
+        top: top_+3.0,
         right: 3.0 
       ),
       child: Icon(
@@ -36,7 +38,7 @@ class DescriptionPlace extends StatelessWidget {
     
     final star = Container(
       margin:  EdgeInsets.only(
-        top: 323.0,
+        top: top_+3.0,
         right: 3.0 
       ),
       child: Icon(
@@ -50,7 +52,7 @@ class DescriptionPlace extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.only(
-            top:320.0,
+            top:top_,
             left: 20.0,
             right: 20.0
           ),
@@ -66,6 +68,7 @@ class DescriptionPlace extends StatelessWidget {
 
         ),
         Row(
+      
           children: [
             star,
             star,
@@ -94,9 +97,11 @@ class DescriptionPlace extends StatelessWidget {
     );
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         title_starts,
-        description
+        description,
+        ButtonPurple("Navigate")
       ],
     );
   }

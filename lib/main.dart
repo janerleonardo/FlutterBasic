@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'description_place.dart';
 import 'review_place_list.dart';
-import 'gradient_back.dart';
+import 'header_appbar.dart';
 void main() {
   runApp( MyApp());
 }
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
                   ReviewPlaceList()
               ],
             ),
-            GradientBack()
+            HeaderAppBar()
           ],
         ),
         // Column(
