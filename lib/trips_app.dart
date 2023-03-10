@@ -43,32 +43,38 @@ class _TripsApp extends State<TripsApp> {
       body: widgetChildren[indexTap],
       bottomNavigationBar: Theme(data: Theme.of(context).copyWith(
         canvasColor: Colors.white,
-        primaryColor: Colors.purple
+        primaryColor: Colors.green
 
       ),
         child: BottomNavigationBar(
           currentIndex: indexTap,
           onTap: OnTapTapped ,
+          showSelectedLabels: false,
           showUnselectedLabels: false,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home,
+              color: Colors.grey.shade400),
               label: ""
               ),
               BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.search,
+              color: Colors.grey.shade400,),
               label: ""
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.map),
+                icon: Icon(Icons.map,
+              color: Colors.grey.shade400),
                 label: ""
               ),
                BottomNavigationBarItem(
-                icon: Icon(Icons.notification_add),
+                icon: Icon(Icons.notification_add,
+              color: Colors.grey.shade400),
                 label: ""
               ),
                BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.person,
+              color: Colors.grey.shade400),
                 label: ""
               )
           ])),
