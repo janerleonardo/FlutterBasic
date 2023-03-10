@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'description_place.dart';
-import 'review_place_list.dart';
-import 'header_appbar.dart';
+import 'trips_app.dart';
+
 void main() {
   runApp( MyApp());
 }
@@ -31,17 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
      home:  Scaffold(
-        body: Stack(
-          children: [
-            ListView(
-              children: [
-                  DescriptionPlace("Bahamas",4,stringDommy) ,
-                  ReviewPlaceList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        ),
+        body: TripsApp(),
         // Column(
         //  children: [
         //    DescriptionPlace("Bahamas",4,stringDommy) ,
