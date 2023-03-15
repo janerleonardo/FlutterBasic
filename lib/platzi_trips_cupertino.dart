@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'home_trips.dart';
-import 'search_trips.dart';
-import 'profile_trips.dart';
+import 'package:firtsappflutter/Place/ui/screens/home_trips.dart';
+import 'package:firtsappflutter/Place/ui/screens/search_trips.dart';
+import 'package:firtsappflutter/User/ui/screens/profile_trips.dart';
 
 class PlatziTripsCupertino extends StatelessWidget {
   @override
@@ -46,7 +46,7 @@ class PlatziTripsCupertino extends StatelessWidget {
               break;
 
               default:
-              return CupertinoTabView(
+               return CupertinoTabView(
                 builder: (BuildContext context) => HomeTrips(),
               );
               break;
