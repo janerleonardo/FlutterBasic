@@ -3,7 +3,6 @@ import 'card_image.dart';
 
 class CardImageList extends StatelessWidget {
 
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -12,13 +11,12 @@ class CardImageList extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.all(25.0),
         scrollDirection: Axis.horizontal,
-        children: [
-          CardImage("assets/img/Image1.jpg"),
-          CardImage("assets/img/Imagen2.jpg"),
-          CardImage("assets/img/Imagen3.jpg"),
-          CardImage("assets/img/Imagen4.jpg"),
-          CardImage("assets/img/Imagen5.jpg"),
-          CardImage("assets/img/Imagen6.jpg"),
+        children: <Widget>[
+          CardImage("assets/img/beach_palm.jpeg"),
+          CardImage("assets/img/mountain.jpeg"),
+          CardImage("assets/img/mountain_stars.jpeg"),
+          CardImage("assets/img/river.jpeg"),
+          CardImage("assets/img/sunset.jpeg"),
         ],
       ),
     );
